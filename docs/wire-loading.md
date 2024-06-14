@@ -65,6 +65,11 @@ However, in addition to this default behavior, Livewire offers the `.attr` modif
 
 Because the button above isn't a submit button, it won't be disabled by Livewire's default form handling behavior when pressed. Instead, we manually added `wire:loading.attr="disabled"` to achieve this behavior.
 
+If you need to toggle multiple attributes, you can use a comma seperated list:
+```blade
+<button wire:loading.attr="disabled, data-loading">...</button>
+```
+
 ## Targeting specific actions
 
 By default, `wire:loading` will be triggered whenever a component makes a request to the server.
